@@ -1,28 +1,66 @@
 import datetime
 import json
-import datetime
 import os
 
 class FileSaver:
-    def __init__(self, file_location) -> None:
+    """
+    This class is responsible for CRUD operations with databases.
+    The imitations of databases is json files located in the data folder.
+    """
+    def __init__(self, file_location, file_format, folder_name) -> None:
         self.file_location = file_location
-    
-    def save_file(self):
-        pass
+        self.file_format = file_format
+        self.folder_name = folder_name
 
-    def create_db(self, name):
-        if os.path.exists(name):
-            print('db with this name is already exists')
-            return
-        now = str(datetime.datetime.now())
-        with open(name, 'w') as o:
+    def save_file(self, word, db_name):
+        "saves a word to the db"
+        file_name = self.folder_name + db_name + self.file_format
+
+        with open(file_name, 'r', encoding='utf8') as f:
+            data = json.load(f)
             now = str(datetime.datetime.now())
-            data = {
-                "notes": [],
-                "last_updated": now
-            }
-            json.dump(data, o)
-            print('Databse created. You are ready to add notes.')
+
+            data['words'].append(word)
+            data["last_updated"] = now
+
+            try:
+                with open(file_name, "w", encoding='utf8') as o:
+                  json.dump(data, o, ensure_ascii=False)
+            except IOError as e:
+                print('oops!', e)
+
+    def create_db(self, data, name):
+        "creates a database name if no exists"
+
+        print('checking databases...')
+        db_exists = self.check_db_exists(name)
+        if not db_exists:
+            print('database is creating...')
+            now = str(datetime.datetime.now())
+            with open(self.folder_name + name + self.file_format, 'w') as o:
+                now = str(datetime.datetime.now())
+                data["last_updated"] = now
+                json.dump(data, o)
+                print('Databse created. You are ready to add notes.')
+
+    def check_db_exists(self, db_name):
+        'checks if db exists'
+
+        print("checking a file for existing")
+        if os.path.exists(self.folder_name + db_name + self.file_format):
+            print('this name is already exists')
+            return True
+        return False
+    
+    def drop_db(self, db_name):
+        "deletes a db"
+
+        file_name = self.folder_name + db_name + self.file_format
+        if os.path.exists(file_name):
+            os.remove(file_name)
+            print('db was deleted')
+        else:
+            print("The file does not exist")
 
     def check_word(self):
-        pass
+        print('works')

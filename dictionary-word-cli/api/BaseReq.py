@@ -1,23 +1,39 @@
 import requests
 import json
-headers = {
+import uuid
+import datetime
+
+HEADERS = {
     'x-rapidapi-key': "d75c6c9665msh5467048e1cfda96p1b5a75jsnf2d0f09ae1bd",
     'x-rapidapi-host': "google-translate20.p.rapidapi.com"
 }
 
 class BaseReq:
+    """
+    This class is responsible for a comunication with our server or API.
+    """
     def __init__(self, url, file):
         self.url = url
         self.file = file
 
-    def get_word(self, text, target):
+    def get_word(self, text, target='ru'):
+        "gets a data from the API endpoint and return in an appropriate interface"
+
         querystring = {'text': text, 'tl': target}
-        print(querystring)
-        response = requests.request("GET", self.url + '/translate', headers = headers, params = querystring)
-        self.parse_word(response)
+        print('requesting the word')
+        response = requests.request("GET", self.url + '/translate', headers = HEADERS, params = querystring)
+        print('parsing the result')
+        translation = self.parse_word(response)
+        return {'word': text, 
+                'translation': translation, 
+                "id": str(uuid.uuid4()), 
+                "last_updated": str(datetime.datetime.now())
+            }
 
     def parse_word(self, data):
+        "parses and return a translated text"
+
         parsed = json.loads(data.text)
         data = parsed['data']
         translation = data['translation']
-        print(translation)
+        return translation
