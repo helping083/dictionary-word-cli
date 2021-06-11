@@ -25,6 +25,7 @@ class HelloWorld(cmd.Cmd):
         if not name:
             print('please, provide a database name')
             return
+
         print("starting to create a database")
         data = {
             'words': []

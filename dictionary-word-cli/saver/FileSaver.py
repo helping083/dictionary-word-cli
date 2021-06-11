@@ -25,9 +25,9 @@ class FileSaver:
 
             try:
                 with open(file_name, "w", encoding='utf8') as o:
-                  json.dump(data, o, ensure_ascii=False)
+                  json.dump(data, o, ensure_ascii=False, sort_keys=True, indent=4)
             except IOError as e:
-                print('oops!', e)
+                  print('oops!', e)
 
     def create_db(self, data, name):
         "creates a database name if no exists"
@@ -41,7 +41,7 @@ class FileSaver:
                 now = str(datetime.datetime.now())
                 data["last_updated"] = now
                 json.dump(data, o)
-                print('Databse created. You are ready to add notes.')
+                print('Database is created. You are ready to add notes.')
 
     def check_db_exists(self, db_name):
         'checks if db exists'

@@ -18,22 +18,23 @@ class BaseReq:
 
     def get_word(self, text, target='ru'):
         "gets a data from the API endpoint and return in an appropriate interface"
-
         querystring = {'text': text, 'tl': target}
+
         print('requesting the word')
         response = requests.request("GET", self.url + '/translate', headers = HEADERS, params = querystring)
-        print('parsing the result')
-        translation = self.parse_word(response)
-        return {'word': text, 
-                'translation': translation, 
-                "id": str(uuid.uuid4()), 
-                "last_updated": str(datetime.datetime.now())
-            }
 
-    def parse_word(self, data):
-        "parses and return a translated text"
+        print('parsing the result')
+        return self.parse_word(response, text)
+
+    def parse_word(self, data, text):
+        "parses and return data"
 
         parsed = json.loads(data.text)
         data = parsed['data']
         translation = data['translation']
-        return translation
+
+        return {'word': text, 
+                'translation': translation, 
+                "id": str(uuid.uuid4()), 
+                "last_updated": str(datetime.datetime.now())
+               }
