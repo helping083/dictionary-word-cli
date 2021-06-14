@@ -1,5 +1,5 @@
 {
-    "last_updated": "2021-06-11 08:53:33.629458",
+    "last_updated": "2021-06-11 11:59:24.380881",
     "words": [
         {
             "id": "afdea44f-c3ef-4cf7-a5fc-851c6e4ed1a8",
@@ -102,6 +102,60 @@
             "last_updated": "2021-06-11 08:53:33.462759",
             "translation": "стекло",
             "word": "glass"
+        },
+        {
+            "id": "542b6811-03b2-44c0-9028-6908c6dcc90f",
+            "last_updated": "2021-06-11 10:57:00.280589",
+            "translation": "небрежность",
+            "word": "sloppies"
+        },
+        {
+            "id": "8196961b-590d-463d-825f-41b11963db3b",
+            "last_updated": "2021-06-11 10:57:51.448455",
+            "translation": "слизистая оболочка",
+            "word": "mucous membrane"
+        },
+        {
+            "id": "c11d76e9-8f07-43e9-bf30-78df49bb5934",
+            "last_updated": "2021-06-11 10:58:09.741714",
+            "translation": "восприимчивый",
+            "word": "supceptible"
+        },
+        {
+            "id": "39569245-3b01-4d14-8064-baee39146561",
+            "last_updated": "2021-06-11 10:58:27.877931",
+            "translation": "рак шейки матки",
+            "word": "cervical cancer"
+        },
+        {
+            "id": "6f2bc631-4b28-43b4-a681-7198fb1d5d88",
+            "last_updated": "2021-06-11 11:20:32.856397",
+            "translation": "вычищать",
+            "word": "expunge"
+        },
+        {
+            "id": "d5874fae-6170-47d3-b132-6695dc240b8b",
+            "last_updated": "2021-06-11 11:33:25.672028",
+            "translation": "шум в ушах",
+            "word": "tinnitus"
+        },
+        {
+            "id": "fdc76369-c7f0-4122-8c71-e7496bbe5563",
+            "last_updated": "2021-06-11 11:46:53.407025",
+            "translation": "получить ответную реакцию",
+            "word": "get backlash"
+        },
+        {
+            "id": "34c4f3f2-de43-4cab-8e2a-a3f2033cc415",
+            "last_updated": "2021-06-11 11:55:20.108973",
+            "translation": "светящееся платье",
+            "word": "luminous dress"
+        },
+        {
+            "id": "d7c12313-bac6-463b-9eff-60e32c22fa19",
+            "last_updated": "2021-06-11 11:59:21.165774",
+            "translation": "немного неуклюжий",
+            "word": "a bit frumpy"
         }
     ]
 }

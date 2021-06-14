@@ -1,6 +1,7 @@
 from api import BaseReq
 from saver import FileSaver
 from arg_parsers import HelloWorld
+from utils import create_data_folder
 
 #constants
 URL = "https://google-translate20.p.rapidapi.com"
@@ -9,9 +10,10 @@ FILE_FORMAT = '.json'
 FOLDER = './data/'
 
 #base classes
-req = BaseReq(URL, FILE)
-json_saver = FileSaver(FILE, FILE_FORMAT, FOLDER)
-base_parser = HelloWorld(req, json_saver)
+api = BaseReq(URL, FILE)
+file_saver = FileSaver(FILE, FILE_FORMAT, FOLDER)
+controller = HelloWorld(api, file_saver)
 
 def main():
-   base_parser.cmdloop()
+   create_data_folder()
+   controller.cmdloop()
