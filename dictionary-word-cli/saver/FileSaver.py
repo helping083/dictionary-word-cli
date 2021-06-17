@@ -23,12 +23,15 @@ class FileSaver:
             data['words'].append(word)
             data["last_updated"] = now
 
+            self.write_file(file_name, data)
+
+    def write_file(self, file_name, data):
             try:
                 with open(file_name, "w", encoding='utf8') as o:
                   json.dump(data, o, ensure_ascii=False, sort_keys=True, indent=4)
             except IOError as e:
                   print('oops!', e)
-
+    
     def create_db(self, data, name):
         "creates a database name if no exists"
 
@@ -62,5 +65,16 @@ class FileSaver:
         else:
             print("The file does not exist")
 
-    def check_word(self):
-        print('works')
+    def check_duplicate_word(self, word, db_name):
+        "this method checks if the world exists in the database"
+
+        file_name = self.folder_name + db_name + self.file_format
+
+        with open(file_name, 'r', encoding='utf8') as f:
+            data = json.load(f)
+            for item in data['words']:
+                original_word = item['word']
+                if original_word == word:
+                    print('the world {} exists in db'.format(original_word),'\n')
+                    return True
+        return False

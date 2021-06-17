@@ -1,5 +1,5 @@
 {
-    "last_updated": "2021-06-11 11:59:24.380881",
+    "last_updated": "2021-06-17 10:53:36.939147",
     "words": [
         {
             "id": "afdea44f-c3ef-4cf7-a5fc-851c6e4ed1a8",
@@ -156,6 +156,42 @@
             "last_updated": "2021-06-11 11:59:21.165774",
             "translation": "немного неуклюжий",
             "word": "a bit frumpy"
+        },
+        {
+            "id": "36f3d74d-e973-4eac-b90e-0b0e4d50a5c1",
+            "last_updated": "2021-06-17 10:42:30.849433",
+            "translation": "дружелюбный",
+            "word": "amicable"
+        },
+        {
+            "id": "ea3b6275-8bbd-47e6-86ab-d85ea11d2d9e",
+            "last_updated": "2021-06-17 10:46:18.756268",
+            "translation": "удобная карьера",
+            "word": "cushy career"
+        },
+        {
+            "id": "14c17cd2-51aa-4119-987e-a445dd27081f",
+            "last_updated": "2021-06-17 10:47:28.261490",
+            "translation": "удобная карьера",
+            "word": "cushy career"
+        },
+        {
+            "id": "87258a74-17d7-43fb-bd4a-680e15718964",
+            "last_updated": "2021-06-17 10:47:45.138135",
+            "translation": "удобная карьера",
+            "word": "cushy career"
+        },
+        {
+            "id": "1e42f803-26ba-4ecd-8065-7368fb6bb221",
+            "last_updated": "2021-06-17 10:48:04.706699",
+            "translation": "дизайн",
+            "word": "conception"
+        },
+        {
+            "id": "e2559a5b-83ac-4a6d-95e3-fc7f3146949d",
+            "last_updated": "2021-06-17 10:53:36.837971",
+            "translation": "истец",
+            "word": "plaintiff"
         }
     ]
 }
