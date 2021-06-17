@@ -1,2 +1,2 @@
 from .BaseParser import BaseParser
-from .HelloWorld import HelloWorld
+from .BaseController import BaseController

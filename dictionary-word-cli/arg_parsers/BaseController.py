@@ -1,6 +1,6 @@
 import cmd
 
-class HelloWorld(cmd.Cmd):
+class BaseController(cmd.Cmd):
     "Base app controller"
 
     intro = 'Welcome to the dictionary shell. Type help or ? to list commands or quit to quit the programm.\n'
@@ -37,10 +37,14 @@ class HelloWorld(cmd.Cmd):
 
         print('starting to save a word')
         resp = self.req.get_word(word)
-        print('resp', resp)
+        print('response', resp, '\n')
         self.saver.save_file(resp, 'words')
 
-        print('the world was saved in the db')
+        print('the world was saved in the db' '\n')
+    
+    def do_check(self, word):
+        is_word_exists = self.saver.check_duplicate_word(word, 'words')
+        
     
     def do_delete_db(self, name):
         "deletes a db by a db's name"

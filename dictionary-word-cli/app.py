@@ -1,6 +1,6 @@
 from api import BaseReq
 from saver import FileSaver
-from arg_parsers import HelloWorld
+from arg_parsers import BaseController
 from utils import create_data_folder
 
 #constants
@@ -12,7 +12,7 @@ FOLDER = './data/'
 #base classes
 api = BaseReq(URL, FILE)
 file_saver = FileSaver(FILE, FILE_FORMAT, FOLDER)
-controller = HelloWorld(api, file_saver)
+controller = BaseController(api, file_saver)
 
 def main():
    create_data_folder()
