@@ -1,5 +1,5 @@
 {
-    "last_updated": "2021-06-17 10:53:36.939147",
+    "last_updated": "2021-06-19 00:58:19.234923",
     "words": [
         {
             "id": "afdea44f-c3ef-4cf7-a5fc-851c6e4ed1a8",
@@ -192,6 +192,42 @@
             "last_updated": "2021-06-17 10:53:36.837971",
             "translation": "истец",
             "word": "plaintiff"
+        },
+        {
+            "id": "54e67857-b8d3-484c-a879-112b905e82cc",
+            "last_updated": "2021-06-18 17:59:56.370472",
+            "translation": "с кляпом во рту",
+            "word": "gagged"
+        },
+        {
+            "id": "8622230d-54ef-4308-89d5-5adbc636e14c",
+            "last_updated": "2021-06-18 18:02:43.769215",
+            "translation": "тревожный",
+            "word": "apprehensiveapprehensive"
+        },
+        {
+            "id": "ffcf0c35-3e80-41b5-9bb1-424b347b330d",
+            "last_updated": "2021-06-18 18:18:40.370623",
+            "translation": "прямо",
+            "word": "outright"
+        },
+        {
+            "id": "bb783ea0-6cfa-49f0-9a30-0747a2702654",
+            "last_updated": "2021-06-18 18:22:04.025454",
+            "translation": "герпес",
+            "word": "cold sores"
+        },
+        {
+            "id": "bd9a31de-1b77-4c9b-a951-e7818e78174e",
+            "last_updated": "2021-06-18 18:32:55.260276",
+            "translation": "плеоназм",
+            "word": "pleonasm"
+        },
+        {
+            "id": "04a6acc9-ec78-4ce5-a49f-4ee3a890397c",
+            "last_updated": "2021-06-19 00:58:18.433137",
+            "translation": "реконструкция",
+            "word": "revamping"
         }
     ]
 }

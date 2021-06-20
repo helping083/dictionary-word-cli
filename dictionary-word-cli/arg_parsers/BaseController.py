@@ -3,7 +3,9 @@ import cmd
 class BaseController(cmd.Cmd):
     "Base app controller"
 
+    #@override
     intro = 'Welcome to the dictionary shell. Type help or ? to list commands or quit to quit the programm.\n'
+    #@override
     prompt = 'type a command '
 
     def __init__(self, req, saver):
@@ -51,7 +53,8 @@ class BaseController(cmd.Cmd):
 
         print("starting to delete a database")
         self.saver.drop_db(name)
-
+    
+    #@override
     def postloop(self):
         "this function fires before finishing the app"
         print('bye!')
